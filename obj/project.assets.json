@@ -3690,23 +3690,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MATHEUSCANOVASALMEID\\.nuget\\packages\\": {},
+    "C:\\Users\\mathe\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\ws-dotnet\\ConnectData.Api\\ConnectData.Api.csproj",
+      "projectUniqueName": "D:\\Projects\\ConnectData.Api\\ConnectData.Api.csproj",
       "projectName": "ConnectData.Api",
-      "projectPath": "C:\\Projects\\ws-dotnet\\ConnectData.Api\\ConnectData.Api.csproj",
-      "packagesPath": "C:\\Users\\MATHEUSCANOVASALMEID\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\ws-dotnet\\ConnectData.Api\\obj\\",
+      "projectPath": "D:\\Projects\\ConnectData.Api\\ConnectData.Api.csproj",
+      "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\ConnectData.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MATHEUSCANOVASALMEID\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

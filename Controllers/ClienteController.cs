@@ -22,7 +22,7 @@ public class ClienteController(ConnectDataContext context, ILogger<ClienteContro
         _logger.LogInformation("GET | /Cliente | Iniciando | Timestamp: {}", DateTime.UtcNow);
         var result = _context.Clientes.ToList();
         _logger.LogInformation("GET | /Cliente | Finalizado | Timestamp: {} | Success: true | Reponse: {}", DateTime.UtcNow, JsonSerializer.Serialize(result));
-        return Ok(result);
+        return Ok(new { success = true, response = result});
     }
 
     [HttpGet("{id:int}")]
@@ -31,7 +31,7 @@ public class ClienteController(ConnectDataContext context, ILogger<ClienteContro
         _logger.LogInformation("GET | /Cliente/{} | Iniciando | Timestamp: {}", id, DateTime.UtcNow);
         var result = _context.Clientes.Find(id);
         _logger.LogInformation("GET | /Cliente | Finalizado | Timestamp: {} | Success: true | Reponse: {}", DateTime.UtcNow, JsonSerializer.Serialize(result));
-        return Ok(result);
+        return Ok(new { success = true, response = result });
     }
 
     [HttpPost]
@@ -50,20 +50,20 @@ public class ClienteController(ConnectDataContext context, ILogger<ClienteContro
         var result = _context.Clientes.Add(model);
         _context.SaveChanges();
         _logger.LogInformation("POST | /Cliente | Finalizado | Timestamp: {} | Success: true | Response: {}", DateTime.UtcNow, JsonSerializer.Serialize(result.Entity));
-        return CreatedAtAction(nameof(GetClienteById), new { Id = result.Entity.Id }, result.Entity);
+        return CreatedAtAction(nameof(GetClienteById), new { success = true, response = new { Id = result.Entity.Id }, result.Entity });
     }
 
     [HttpDelete("{id:int}")]
     public IActionResult DeleteCliente(int id) {
-        _logger.LogInformation("DELETE | /Cliente/{} | Iniciando | Timestamp: {}" , id, DateTime.UtcNow);
+        _logger.LogInformation("DELETE | /Cliente/{} | Iniciando | Timestamp: {}", id, DateTime.UtcNow);
         var model = _context.Clientes.Find(id);
-        if (model == null) 
+        if (model == null)
         {
             return NotFound(new { success = false, message = "Entidade requisitada não encontrada, por favor tente novamente." });
         }
         _context.Clientes.Remove(model);
         _context.SaveChanges();
-        _logger.LogInformation("DELETE | /Cliente/{} | Finalizado | Timestamp: {} | Response: 204 NoContent" , id, DateTime.UtcNow);
-        return NoContent();
+        _logger.LogInformation("DELETE | /Cliente/{} | Finalizado | Timestamp: {} | Response: 204 NoContent", id, DateTime.UtcNow);
+        return Ok(new { sucess = true });
     }
 }

@@ -2,6 +2,7 @@
 using ConnectData.Api.Models;
 using ConnectData.Api.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using System.Data.Entity;
 using System.Text.Json;
 
@@ -9,7 +10,7 @@ namespace ConnectData.Api.Controllers;
 
 [ApiController]
 [Route("/v1/[controller]")]
-public class ClienteController(ConnectDataContext context, ILogger<ClienteController> logger) : ControllerBase
+public class FibraController(ConnectDataContext context, ILogger<ClienteController> logger) : ControllerBase
 {
 
     private readonly ConnectDataContext _context = context;
@@ -20,41 +21,52 @@ public class ClienteController(ConnectDataContext context, ILogger<ClienteContro
     public IActionResult GetAllClientes()
     {
         _logger.LogInformation("GET | /Cliente | Iniciando | Timestamp: {}", DateTime.UtcNow);
-        var result = _context.Clientes.ToList();
+        var result = _context.Fibras.ToList();
+        if (result != null)
+        {
+            foreach(var item in result)
+            {
+                item.Cliente = _context.Clientes.FirstOrDefault(p => item.ClienteId == item.ClienteId);
+            }
+        }
         _logger.LogInformation("GET | /Cliente | Finalizado | Timestamp: {} | Success: true | Reponse: {}", DateTime.UtcNow, JsonSerializer.Serialize(result));
         return Ok(new { success = true, response = result });
     }
 
     [HttpGet("{id:int}")]
-    public IActionResult GetClienteById(int id)
+    public IActionResult GetFibraById(int id)
     {
         _logger.LogInformation("GET | /Cliente/{} | Iniciando | Timestamp: {}", id, DateTime.UtcNow);
-        var result = _context.Clientes.Find(id);
+        var result = _context.Fibras.FirstOrDefault(p => p.Id == id);
+        if (result != null)
+        {
+            result.Cliente = _context.Clientes.FirstOrDefault(p => p.ClienteId == result.ClienteId);
+        }
         _logger.LogInformation("GET | /Cliente | Finalizado | Timestamp: {} | Success: true | Reponse: {}", DateTime.UtcNow, JsonSerializer.Serialize(result));
         return Ok(new { success = true, response = result });
     }
 
     [HttpPost]
-    public IActionResult CreateClient([FromBody] ClienteResource resource)
+    public IActionResult CreateFibra([FromBody] FibraResource resource)
     {
         _logger.LogInformation("POST | /Cliente | Iniciando | Timestamp: {} | Request: {}", DateTime.UtcNow, JsonSerializer.Serialize(resource));
-        var model = new Cliente
+        var model = new Fibra
         {
-            Cpf = resource.Cpf,
-            Email = resource.Email,
-            Endereco = resource.Endereco,
-            Nome = resource.Nome,
-            Telefone = resource.Telefone,
-            DataCadastro = DateOnly.FromDateTime(DateTime.Now)
+            Tipo = resource.Tipo,
+            Velocidade = resource.Velocidade,
+            Plano = resource.Plano,
+            ClienteId = resource.ClienteId,
         };
-        var result = _context.Clientes.Add(model);
+        var result = _context.Fibras.Add(model);
         _context.SaveChanges();
+        var responseBody = result.Entity;
+        responseBody.Cliente = _context.Clientes.FirstOrDefault(c => c.ClienteId == resource.ClienteId);
         _logger.LogInformation("POST | /Cliente | Finalizado | Timestamp: {} | Success: true | Response: {}", DateTime.UtcNow, JsonSerializer.Serialize(result.Entity));
-        return CreatedAtAction(nameof(GetClienteById), new { Id = result.Entity.ClienteId }, result.Entity);
+        return CreatedAtAction(nameof(GetFibraById), new { result.Entity.Id }, result.Entity);
     }
 
     [HttpDelete("{id:int}")]
-    public IActionResult DeleteCliente(int id)
+    public IActionResult DeleteFibra(int id)
     {
         _logger.LogInformation("DELETE | /Cliente/{} | Iniciando | Timestamp: {}", id, DateTime.UtcNow);
         var model = _context.Clientes.Find(id);

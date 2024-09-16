@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ConnectData.Api.Models;
 
 public class Cliente
 {
     [Key]
-    public int Id { get; set; }
+    public int ClienteId { get; set; }
 
     [Required]
     public string Nome { get;set; }
-
+    
     [Required]
     public string Cpf { get; set; }
 
@@ -24,5 +25,5 @@ public class Cliente
 
     [Required]
     public DateOnly DataCadastro { get; set; }
-
+    
 }

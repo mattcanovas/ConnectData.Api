@@ -34,25 +34,6 @@ public class ClienteController(ConnectDataContext context, ILogger<ClienteContro
         return Ok(new { success = true, response = result });
     }
 
-    [HttpPost]
-    public IActionResult CreateClient([FromBody] ClienteResource resource)
-    {
-        _logger.LogInformation("POST | /Cliente | Iniciando | Timestamp: {} | Request: {}", DateTime.UtcNow, JsonSerializer.Serialize(resource));
-        var model = new Cliente
-        {
-            Cpf = resource.Cpf,
-            Email = resource.Email,
-            Endereco = resource.Endereco,
-            Nome = resource.Nome,
-            Telefone = resource.Telefone,
-            DataCadastro = DateOnly.FromDateTime(DateTime.Now)
-        };
-        var result = _context.Clientes.Add(model);
-        _context.SaveChanges();
-        _logger.LogInformation("POST | /Cliente | Finalizado | Timestamp: {} | Success: true | Response: {}", DateTime.UtcNow, JsonSerializer.Serialize(result.Entity));
-        return CreatedAtAction(nameof(GetClienteById), new { Id = result.Entity.ClienteId }, result.Entity);
-    }
-
     [HttpDelete("{id:int}")]
     public IActionResult DeleteCliente(int id)
     {

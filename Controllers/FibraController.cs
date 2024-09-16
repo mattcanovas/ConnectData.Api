@@ -46,25 +46,6 @@ public class FibraController(ConnectDataContext context, ILogger<ClienteControll
         return Ok(new { success = true, response = result });
     }
 
-    [HttpPost]
-    public IActionResult CreateFibra([FromBody] FibraResource resource)
-    {
-        _logger.LogInformation("POST | /Cliente | Iniciando | Timestamp: {} | Request: {}", DateTime.UtcNow, JsonSerializer.Serialize(resource));
-        var model = new Fibra
-        {
-            Tipo = resource.Tipo,
-            Velocidade = resource.Velocidade,
-            Plano = resource.Plano,
-            ClienteId = resource.ClienteId,
-        };
-        var result = _context.Fibras.Add(model);
-        _context.SaveChanges();
-        var responseBody = result.Entity;
-        responseBody.Cliente = _context.Clientes.FirstOrDefault(c => c.ClienteId == resource.ClienteId);
-        _logger.LogInformation("POST | /Cliente | Finalizado | Timestamp: {} | Success: true | Response: {}", DateTime.UtcNow, JsonSerializer.Serialize(result.Entity));
-        return CreatedAtAction(nameof(GetFibraById), new { result.Entity.Id }, result.Entity);
-    }
-
     [HttpDelete("{id:int}")]
     public IActionResult DeleteFibra(int id)
     {

@@ -1,7 +1,18 @@
 using ConnectData.Api.Data.Contexts;
+using ConnectData.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var kafkaBootstrapServers = "localhost:9092"; // Endereço do seu broker Kafka
+var kafkaTopic = "Clients"; // Nome do tópico que você deseja consumir
+var kafkaGroupId = "1"; // ID do grupo de consumidores
+
+// Adicionar o serviço de fundo Kafka
+builder.Services.AddScoped<ClienteService>(); // Registrar o serviço
+builder.Services.AddScoped<FibraService>(); // Registrar o serviço
+
+
 
 // Add services to the container.
 
@@ -15,8 +26,11 @@ builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
 
-// Configurando Contexts
-builder.Services.AddDbContext<ConnectDataContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Configurando Contexs
+builder.Services.AddDbContext<ConnectDataContext>(options => options.UseInMemoryDatabase("InMemory"));
+builder.Services.AddHostedService<KafkaConsumerService>();
+
+    
 
 var app = builder.Build();
 

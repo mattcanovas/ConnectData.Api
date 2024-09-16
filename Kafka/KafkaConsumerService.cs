@@ -54,11 +54,10 @@ public class KafkaConsumerService : IHostedService
                 {
                     var cr = consumer.Consume(cancellationToken);
                     var key = cr.Message.Key; // Supondo que a chave esteja disponível aqui
-                    Console.WriteLine("a");
 
                     // Seleciona o serviço e o recurso com base na chave da mensagem
                     using (var scope = _scopeFactory.CreateScope()){
-                         var clienteService = scope.ServiceProvider.GetRequiredService<ClienteService>();
+                        var clienteService = scope.ServiceProvider.GetRequiredService<ClienteService>();
                         var fibraService = scope.ServiceProvider.GetRequiredService<FibraService>();
 
                     if (key.ToString() == "Cliente")

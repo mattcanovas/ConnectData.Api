@@ -492,6 +492,7 @@ C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\refi
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.pdb
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.genruntimeconfig.cache
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ref\ConnectData.Api.dll
+<<<<<<< HEAD
 C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\appsettings.json
 C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\ConnectData.Api.exe
@@ -642,3 +643,7 @@ C:\Users\pedro\git\fiap\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.pdb
 C:\Users\pedro\git\fiap\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.genruntimeconfig.cache
 C:\Users\pedro\git\fiap\ConnectData.Api\obj\Debug\net8.0\ref\ConnectData.Api.dll
 C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+=======
+C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.AspNetCore.dll
+>>>>>>> master

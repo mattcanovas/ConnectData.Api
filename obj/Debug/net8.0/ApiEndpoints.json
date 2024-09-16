@@ -1,0 +1,139 @@
+[
+  {
+    "ContainingType": "ConnectData.Api.Controllers.CanonicalController",
+    "Method": "GetClienteCanonicalDataFromProduct",
+    "RelativePath": "v1/Canonical/{produto}/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.ClienteController",
+    "Method": "GetAllClientes",
+    "RelativePath": "v1/Cliente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.ClienteController",
+    "Method": "CreateClient",
+    "RelativePath": "v1/Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resource",
+        "Type": "ConnectData.Api.Resources.ClienteResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.ClienteController",
+    "Method": "GetClienteById",
+    "RelativePath": "v1/Cliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.ClienteController",
+    "Method": "DeleteCliente",
+    "RelativePath": "v1/Cliente/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.FibraController",
+    "Method": "GetAllClientes",
+    "RelativePath": "v1/Fibra",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.FibraController",
+    "Method": "CreateFibra",
+    "RelativePath": "v1/Fibra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resource",
+        "Type": "ConnectData.Api.Resources.FibraResource",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.FibraController",
+    "Method": "GetFibraById",
+    "RelativePath": "v1/Fibra/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.FibraController",
+    "Method": "DeleteFibra",
+    "RelativePath": "v1/Fibra/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

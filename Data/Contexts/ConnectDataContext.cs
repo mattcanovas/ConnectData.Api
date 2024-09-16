@@ -7,5 +7,5 @@ public class ConnectDataContext(DbContextOptions<ConnectDataContext> options) : 
 {
 
     public DbSet<Cliente> Clientes { get; set; }
-
+    public DbSet<Fibra> Fibras { get; set; }
 }

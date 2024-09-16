@@ -19,16 +19,12 @@ public class CanonicalController(ConnectDataContext context, ILogger<CanonicalCo
         try
         {
             _logger.LogInformation("GET | /v1/Canonical | Iniciando | Timestamp: {} | Produto: {} | IdCliente: {}", DateTime.UtcNow, produto, id);
-            switch (produto.ToLower())
-            {
-                case "fibra":
-                    var result = _context.Fibras.FirstOrDefault(c => c.ClienteId == id);
-                    result.Cliente = _context.Clientes.FirstOrDefault(c => c.ClienteId == id);
-                    _logger.LogInformation("GET | /v1/Canonical | Finalizado | Timestamp: {} | Produto: {} | IdCliente: {}", DateTime.UtcNow, produto, id);
-                    return Ok(new { success = true, response = result });
-                default:
-                    throw new KeyNotFoundException("Entidade não encontrada no context atual.");
-            }
+
+            var result = _context.Fibras.FirstOrDefault(c => c.ClienteId == id);
+            result.Cliente = _context.Clientes.FirstOrDefault(c => c.ClienteId == id);
+            _logger.LogInformation("GET | /v1/Canonical | Finalizado | Timestamp: {} | Produto: {} | IdCliente: {}", DateTime.UtcNow, produto, id);
+            return Ok(new { success = true, response = result });
+
         }
         catch (Exception ex)
         {

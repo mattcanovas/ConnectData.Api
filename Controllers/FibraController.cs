@@ -46,6 +46,22 @@ public class FibraController(ConnectDataContext context, ILogger<ClienteControll
         return Ok(new { success = true, response = result });
     }
 
+    [HttpGet("clientes-por-tipo")]
+    public IActionResult GetClientesPorTipo()
+    {
+        var result = _context.Fibras
+            .Include(f => f.Cliente)
+            .GroupBy(f => f.Tipo)
+            .Select(g => new
+            {                
+                Tipo = g.Key,
+                Clientes = g.Select(f => f.Cliente).ToList()
+            })
+            .ToList();
+
+        return Ok(new { success = true, response = result });
+    }
+
     [HttpDelete("{id:int}")]
     public IActionResult DeleteFibra(int id)
     {

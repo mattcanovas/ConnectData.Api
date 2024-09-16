@@ -492,3 +492,5 @@ C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\refi
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.pdb
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ConnectData.Api.genruntimeconfig.cache
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\obj\Debug\net8.0\ref\ConnectData.Api.dll
+C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.AspNetCore.dll

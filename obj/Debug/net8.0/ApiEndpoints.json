@@ -135,5 +135,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConnectData.Api.Controllers.MetricsController",
+    "Method": "getMetrics",
+    "RelativePath": "v1/Metrics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

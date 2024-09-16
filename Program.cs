@@ -1,5 +1,6 @@
 using ConnectData.Api.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.MapMetrics();
 
 app.MapControllers();
 

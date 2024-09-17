@@ -1,6 +1,7 @@
 ﻿using ConnectData.Api.Data.Contexts;
 using ConnectData.Api.Models;
 using ConnectData.Api.Resources;
+using ConnectData.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using System.Data.Entity;
@@ -10,25 +11,19 @@ namespace ConnectData.Api.Controllers;
 
 [ApiController]
 [Route("/v1/[controller]")]
-public class FibraController(ConnectDataContext context, ILogger<ClienteController> logger) : ControllerBase
+public class FibraController(ConnectDataContext context, ILogger<ClienteController> logger, FibraService fibraService) : ControllerBase
 {
 
     private readonly ConnectDataContext _context = context;
 
     private readonly ILogger<ClienteController> _logger = logger;
+    private readonly FibraService _fibraService = fibraService;
 
     [HttpGet]
     public IActionResult GetAllClientes()
     {
         _logger.LogInformation("GET | /Cliente | Iniciando | Timestamp: {}", DateTime.UtcNow);
-        var result = _context.Fibras.ToList();
-        if (result != null)
-        {
-            foreach(var item in result)
-            {
-                item.Cliente = _context.Clientes.FirstOrDefault(p => item.ClienteId == item.ClienteId);
-            }
-        }
+        var result = _fibraService.GetAllFibras();
         _logger.LogInformation("GET | /Cliente | Finalizado | Timestamp: {} | Success: true | Reponse: {}", DateTime.UtcNow, JsonSerializer.Serialize(result));
         return Ok(new { success = true, response = result });
     }

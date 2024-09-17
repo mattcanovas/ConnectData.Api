@@ -647,3 +647,5 @@ C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\Microsoft.EntityFramewo
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.NetStandard.dll
 C:\Users\MATHEUSCANOVASALMEID\source\repos\ConnectData.Api\bin\Debug\net8.0\Prometheus.AspNetCore.dll
 >>>>>>> master
+C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\Prometheus.NetStandard.dll
+C:\Users\pedro\git\fiap\ConnectData.Api\bin\Debug\net8.0\Prometheus.AspNetCore.dll

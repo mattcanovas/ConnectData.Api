@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\controllers\\metricscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:controllers\\metricscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\data\\contexts\\connectdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:data\\contexts\\connectdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\controllers\\fibracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:controllers\\fibracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\controllers\\canonicalcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:controllers\\canonicalcontrollerv2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\controllers\\canonicalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:controllers\\canonicalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|c:\\users\\matheuscanovasalmeid\\source\\repos\\connectdata.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C65C4BBF-7F83-4A58-B91F-00CBE9F2ECD0}|ConnectData.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 15,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MetricsController.cs",
-              "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\MetricsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MetricsController.cs",
-              "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\MetricsController.cs",
-              "RelativeToolTip": "Controllers\\MetricsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:24:23.294Z",
+              "WhenOpened": "2024-10-19T19:42:39.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CanonicalControllerV2.cs",
+              "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\CanonicalControllerV2.cs",
+              "RelativeDocumentMoniker": "Controllers\\CanonicalControllerV2.cs",
+              "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\CanonicalControllerV2.cs",
+              "RelativeToolTip": "Controllers\\CanonicalControllerV2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T19:17:50.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConnectDataContext.cs",
-              "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Data\\Contexts\\ConnectDataContext.cs",
-              "RelativeDocumentMoniker": "Data\\Contexts\\ConnectDataContext.cs",
-              "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Data\\Contexts\\ConnectDataContext.cs",
-              "RelativeToolTip": "Data\\Contexts\\ConnectDataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T01:15:15.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CanonicalController.cs",
               "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\CanonicalController.cs",
               "RelativeDocumentMoniker": "Controllers\\CanonicalController.cs",
               "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\CanonicalController.cs",
               "RelativeToolTip": "Controllers\\CanonicalController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAABBwA0AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T01:11:51.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FibraController.cs",
-              "DocumentMoniker": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\FibraController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FibraController.cs",
-              "ToolTip": "C:\\Users\\MATHEUSCANOVASALMEID\\source\\repos\\ConnectData.Api\\Controllers\\FibraController.cs",
-              "RelativeToolTip": "Controllers\\FibraController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T00:17:20.769Z",
+              "WhenOpened": "2024-10-19T19:17:23.567Z",
               "EditorCaption": ""
             }
           ]
